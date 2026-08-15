@@ -2,7 +2,7 @@
 
 A front-end recreation of the Netflix landing page, built with plain HTML and CSS. It includes a responsive hero section, movie cards, custom Netflix typography, “More reasons to join” cards, and a frequently asked questions section.
 
-![Netflix Clone hero background](images/preview.png)
+![Netflix Clone preview](images/preview.PNG)
 
 ## Features
 
