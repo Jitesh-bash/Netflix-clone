@@ -1,20 +1,390 @@
+@font-face {
+  font-family: "Netflix Sans"; /* ✓ same name */
+  src: url("Fonts/NetflixSans-Bd.ttf") format("truetype");
+  font-weight: 100; /* ✓ this is what distinguishes it */
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   background-color: black;
   color: #fff;
   margin: 0;
+  padding: 0;
+}
+.text {
+  font-family: "Netflix Sans";
+  font-weight: 100;
+  display: flex;
+  font-size: 14.9px;
 }
 .navbar {
-  height: 40px;
+  height: 45px;
+  gap: 10px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #5c16c5, #e50914);
 }
-.bg{
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  opacity: 50%;
-  display: block;
+.logo {
+  position: relative;
+  margin: 0 10px;
+  padding: 10px;
+  gap: 646px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
-.hero{
-    height: calc(100vh - 40px);
+.button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  background-color: #111314;
+  border: 2px solid rgb(111, 108, 108);
+  border-radius: 5px;
 }
 
+.button .English {
+  font-family: "Netflix Sans";
+  margin: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: white;
+}
+.button .touch {
+  font-family: "Netflix Sans";
+  font-weight: 500;
+  gap: 100px;
+  border-radius: 5px;
+  color: white;
+  display: inline;
+  background-color: red;
+  border: solid red 2px;
+  padding: 6px 15px;
+}
+.logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.bg {
+  position: absolute;
+  object-fit: cover;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 30%;
+  display: block;
+}
+.header {
+  position: relative;
+  height: calc(100vh - 45px);
+}
+.content {
+  position: absolute;
+  font-family: "Netflix Sans";
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 166px;
+  align-items: center;
+  line-height: 0.899;
+  inset: 0;
+  font-size: 25px;
+  text-align: center;
+  flex-direction: column;
+}
+.content1 {
+  font-family: "Netflix Sans";
+  font-size: 16.5px;
+}
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+.buttons input,
+.buttons button {
+  box-sizing: border-box;
+  height: 56px;
+  border-radius: 4px;
+}
+.word {
+  flex: 1;
+  min-width: 0;
+  padding: 0 16px;
+  font-family: "Netflix Sans";
+  font-size: 16px;
+  color: #d0d0d0;
+  background-color: rgba(22, 22, 22, 0.75);
+  border: 1px solid #8c8c8c;
+}
+.word1 {
+  flex: 0 0 235px;
+  padding: 0 18px;
+  font-family: "Netflix Sans";
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+  background-color: #e50914;
+  border: 0;
+  cursor: pointer;
+}
+.logo .language-icon {
+  width: 20px;
+  height: 20px;
+}
+.button .English option {
+  color: black;
+  background-color: white;
+}
+.word1:hover {
+  background-color: #c11119;
+}
+.para {
+  font-size: 14.5px;
+}
+.imp {
+  font-size: 55px;
+}
+.content2 {
+  font-size: 15px;
+}
+.cards {
+  background-color: #000;
+  padding-bottom: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  gap: 45px;
+}
+.hero-divider {
+  position: relative;
+  z-index: 2;
+  height: 96px;
+  margin-top: -54px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.hero-divider::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115%;
+  height: 130px;
+  border-radius: 50% 50% 0 0 / 72px 72px 0 0;
+  background-color: #e50914;
+}
+.hero-divider::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115%;
+  height: 130px;
+  border-radius: 50% 50% 0 0 / 72px 72px 0 0;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #263f94 0%,
+    #000000 32%,
+    #000000 62%,
+    #000000 82%
+  );
+}
+.trending h2 {
+  font-family: "Netflix Sans";
+  margin: 0 0 24px;
+}
+.movie-row {
+  display: flex;
+  gap: 54px;
+  overflow-x: auto;
+  padding: 8px 28px 30px;
+}
+.movie-row img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+.movie-row span:hover {
+  transform: scale(1.08);
+  z-index: 2;
+}
+
+.movie-row span:hover img {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7);
+}
+.box {
+  border: solid red 2px;
+  height: 150px;
+  width: 150px;
+}
+.reasons {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  font-family: "Netflix Sans", Arial, sans-serif;
+}
+.reasons h2 {
+  margin-bottom: 20px;
+  font-size: 26px;
+}
+.reason-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+.reason-card {
+  position: relative;
+  min-height: 280px;
+  padding: 24px 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #192247, #210e17);
+}
+.reason-card h3 {
+  margin: 0 0 16px;
+  color: white;
+  font-size: 24px;
+  line-height: 1.2;
+}
+.reason-card p {
+  margin: 0;
+  color: #b89d9d;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.reason-icon {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  font-size: 56px;
+}
+.faq-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  color: white;
+  background-color: #2d2d2d;
+  margin-bottom: 8px;
+}
+.faq-card h3 {
+  font-family: "Netflix Sans", Arial, sans-serif;
+}
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+}
+
+@media (max-width: 1310px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .logo {
+    gap: 0;
+    justify-content: space-between;
+    margin: 0;
+    padding: 10px clamp(12px, 4vw, 40px);
+  }
+
+  .logo > img {
+    width: clamp(90px, 15vw, 150px);
+    height: auto;
+  }
+
+  .button {
+    gap: 6px;
+  }
+
+  .content {
+    box-sizing: border-box;
+    width: 100%;
+    padding: clamp(100px, 18vh, 166px) 16px 0;
+    font-size: 18px;
+  }
+
+  .content h1 {
+    font-size: clamp(32px, 5vw, 50px);
+    line-height: 1.05;
+  }
+
+  .buttons {
+    width: min(100%, 560px);
+    flex-wrap: wrap;
+  }
+
+  .word {
+    flex: 1 1 260px;
+  }
+
+  .word1 {
+    flex: 1 1 235px;
+  }
+
+  .cards {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .trending {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1200px;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 40px);
+  }
+
+  .movie-row {
+    gap: 20px;
+    padding: 8px 0 30px;
+  }
+
+  .movie-row span {
+    flex: 0 0 auto;
+  }
+
+  .movie-row img {
+    width: clamp(150px, 22vw, 247px);
+    height: auto;
+  }
+
+  .reasons {
+    box-sizing: border-box;
+    padding: 0;
+  }
+
+  .reason-container {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(240px, 100%), 1fr)
+    );
+  }
+
+  .faq {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
