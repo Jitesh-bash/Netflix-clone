@@ -2,6 +2,8 @@
 
 A front-end recreation of the Netflix landing page, built with plain HTML and CSS. It includes a responsive hero section, movie cards, custom Netflix typography, “More reasons to join” cards, and a frequently asked questions section.
 
+🔗 **Live Demo:** [https://jitesh-netflix.vercel.app/](https://jitesh-netflix.vercel.app/)
+
 ![Netflix Clone preview](images/preview.PNG)
 
 ## Features
@@ -24,7 +26,10 @@ A front-end recreation of the Netflix landing page, built with plain HTML and CS
 - CSS media queries
 - CSS `clamp()` for responsive sizing
 
-## Preview
+## Live Demo
+
+Check out the live website deployed on Vercel:
+👉 **[https://jitesh-netflix.vercel.app/](https://jitesh-netflix.vercel.app/)**
 
 The project is a static website and does not require a build tool or package installation.
 
